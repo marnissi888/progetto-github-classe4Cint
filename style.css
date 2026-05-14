@@ -1,0 +1,89 @@
+:root {
+    --primary-green: #2d6a4f;
+    --light-green: #d8f3dc;
+    --accent-orange: #f3722c;
+    --text-dark: #1b4332;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ 
+body {
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+ 
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+ 
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--primary-green);
+}
+ 
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+ 
+.btn:hover { transform: scale(1.05); }
+.btn-primary { background-color: var(--accent-orange); color: var(--white); }
+.btn-secondary { background-color: var(--primary-green); color: var(--white); }
+ 
+.hero {
+    /* وضع رابط صورة حقيقي من Unsplash */
+    background: linear-gradient(rgba(45, 106, 79, 0.85), rgba(45, 106, 79, 0.85)), 
+                url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80') center/cover no-repeat;
+    color: var(--white);
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+ 
+.hero-content h1 { font-size: 3.5rem; margin-bottom: 20px; }
+.hero-content p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 30px auto; }
+ 
+.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.step-card { text-align: center; padding: 20px; }
+.step-card i { width: 48px; height: 48px; margin-bottom: 15px; }
+.icon-orange { stroke: var(--accent-orange); fill: none; }
+.icon-green { stroke: var(--primary-green); fill: none; }
+ 
+.benefits { background-color: var(--light-green); }
+.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+.benefit-card { background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.benefit-card h3 { color: var(--primary-green); margin-bottom: 15px; }
+ 
+.newsletter { background-color: var(--light-gray); text-align: center; }
+.form-container { max-width: 600px; margin: 0 auto; }
+.input-group { display: flex; gap: 10px; margin-top: 30px; }
+.input-group input { flex: 1; padding: 15px; border: 2px solid var(--light-green); border-radius: 25px; outline: none; }
+.input-group input:focus { border-color: var(--primary-green); }
+ 
+.feedback-msg { margin-top: 15px; font-weight: bold; }
+.feedback-msg.success { color: var(--primary-green); }
+.feedback-msg.error { color: red; }
+.hidden { display: none; }
+ 
+footer { background-color: var(--text-dark); color: var(--white); padding: 40px 0; }
+.footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+.footer-socials a { color: var(--white); margin-left: 15px; }
